@@ -1,0 +1,4 @@
+repository "Fers Madness@Japp224@cloud"
+  path "/"
+    smartbranch "/main/Agregar el sistema de correr" 
+     
