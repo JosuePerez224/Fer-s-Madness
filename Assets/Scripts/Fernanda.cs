@@ -13,7 +13,6 @@ public class Fernanda : MonoBehaviour
     public AudioSource ferCaught;
     
     [Header("variables")]
-    private Color _colorOnOver = new Color(0, 0, 0, 0.8705882f);
     private bool _isOver;
     private void Awake()
     {
@@ -51,13 +50,13 @@ public class Fernanda : MonoBehaviour
             
             overPane.SetActive(true);
             
-            _overPaneImage.DOColor(_colorOnOver, 0.2f).OnComplete(() =>
+            _overPaneImage.DOColor(Color.black, 0.2f).OnComplete(() =>
             {
                 Cursor.lockState = CursorLockMode.None;
                 _overPaneImage.DOColor(Color.black, 1f).OnComplete(() =>
                 {
-                    ButtonsManager.Instance.PauseSounds(true);
                     Time.timeScale = 0.0f;  
+                    this.transform.gameObject.SetActive(false);
                 });
             });
         }

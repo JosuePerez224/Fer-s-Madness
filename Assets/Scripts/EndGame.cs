@@ -23,7 +23,6 @@ public class EndGame : MonoBehaviour
         {
             dot.SetActive(false);
             _winPane.SetActive(true);
-            ButtonsManager.Instance.PauseSounds(true);
             _winPaneImage.DOColor(_colorOnWin, 0.2f).OnComplete(() =>
             {
                 Cursor.lockState = CursorLockMode.None;

@@ -27,15 +27,6 @@ public class ButtonsManager : MonoBehaviour
     
     private void Awake()
     {
-        if(Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
         _pausePanel = GameObject.Find("PausePanel");
         _overPanel = GameObject.Find("OverPane");
         _startPanel = GameObject.Find("StartPanel");
